@@ -9,8 +9,8 @@
                 <input type="hidden" name="jenis_surat_id" value="{{ request()->jenis }}">
                 <div class="mb-3">
                     <label for="no_surat">Nomor Surat</label>
-                    <input type="text" placeholder="Nomor Surat" class="form-control" id="no_surat" name="no_surat"
-                        required>
+                    <input type="text" value="{{ $nomor_surat }}" placeholder="Nomor Surat" class="form-control"
+                        id="no_surat" name="no_surat" required>
                     @error('no_surat')
                         <div class="text-danger">
                             {{ $message }}

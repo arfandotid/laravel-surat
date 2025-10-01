@@ -26,7 +26,9 @@ class SuratController extends Controller
     public function create(Request $request)
     {
         if ($request->jenis) {
-            return view('surat.create');
+            $nomor_surat = Surat::generateNomorSurat();
+
+            return view('surat.create', compact('nomor_surat'));
         } else {
             return redirect()->route('surat.index');
         }
